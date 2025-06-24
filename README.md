@@ -1,21 +1,47 @@
+
 # naFila - Frontend
+ 
+Aplicação web para gerenciar livros, filmes, séries, vídeos, podcasts e artigos, controlando seu progresso, prioridades e status.
 
-# Descrição:
-Frontend desenvolvido com HTML5, CSS3 e JavaScript (Vanilla JS) para consumir a API `naFila`. A interface permite cadastrar, visualizar, reordenar e remover conteúdos da fila de forma interativa.
+## Visão Geral
 
-# Tecnologias:
-- HTML5
-- CSS3
-- JavaScript (Puro, sem frameworks)
+Este é o frontend do projeto **naFila**, desenvolvido como parte do MVP da pós-graduação em Desenvolvimento Full Stack da PUC RIO.  
+O projeto é uma **SPA (Single Page Application)** feita com **HTML + CSS + JavaScript**, sem frameworks, conforme os requisitos.
 
-# Como Executar:
-1. **Garanta que o Backend esteja rodando.** A API precisa estar acessível em `http://127.0.0.1:5000`.
+O frontend consome uma API Flask que fornece todos os dados e ações necessárias.
 
-2. **Abra o arquivo `index.html`:**
-   Não é necessário um servidor web. Basta abrir o arquivo `index.html` diretamente no seu navegador de preferência (Ex: Google Chrome, Firefox).
+---
 
-# Funcionalidades
-- **Cadastro de Conteúdos:** Formulário para adicionar novos itens à fila.
-- **Visualização em Cards:** Exibição de todos os conteúdos em um layout de cards responsivo.
-- **Deleção de Conteúdos:** Botão para remover itens da fila.
-- **Consumo da API:** Realiza chamadas para as rotas `/cadastrar`, `/listar` e `/deletar` do backend.
+## Funcionalidades
+
+- ✅ Adicionar novos conteúdos (livros, vídeos, podcasts, etc).
+- ✅ Categorizar por tipo (livro, vídeo, podcast, artigo).
+- ✅ Definir status: `A Fazer`, `Fazendo`, `Concluído`.
+- ✅ Acompanhar o progresso (%).
+- ✅ Editar e excluir conteúdos.
+- ✅ Organizar e priorizar os itens com **drag & drop**.
+- ✅ Filtros por tipo e status.
+- ✅ Busca por título. 
+
+---
+
+## Como Executar o Projeto
+
+### Pré-requisitos:
+- Ter a API (backend) em execução localmente.  
+Se ainda não configurou, acesse: [Repositório Backend](https://github.com/ptohy/nafila-backend)
+
+### Passos:
+
+1. Faça o download ou clone deste repositório:
+
+```git clone https://github.com/ptohy/naFila-frontend.git```
+
+2. Acesse a pasta do projeto:
+
+```cd naFila-frontend```
+
+3. Abra o arquivo `index.html` diretamente no seu navegador:  
+**Funciona diretamente, sem necessidade de servidor local.**
+
+4. Garanta que o backend esteja rodando em `http://127.0.0.1:5000` ou altere no código (`assets/js/script.js`) o endpoint da API, caso necessário.
