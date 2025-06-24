@@ -35,11 +35,15 @@ Se ainda não configurou, acesse: [Repositório Backend](https://github.com/ptoh
 
 1. Faça o download ou clone deste repositório:
 
-```bash git clone https://github.com/ptohy/naFila-frontend.git```
+```bash
+git clone https://github.com/ptohy/naFila-frontend.git
+```
 
 2. Acesse a pasta do projeto:
 
-```bash cd naFila-frontend```
+```bash 
+cd naFila-frontend
+```
 
 3. Abra o arquivo `index.html` diretamente no seu navegador:  
 **Funciona diretamente, sem necessidade de servidor local.**
