@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // --- Drag and Drop (arrastar e soltar) ---
+    // Drag and Drop
     function addDragDropListeners() {
         document.querySelectorAll(".item-card").forEach(card => {
             card.addEventListener("dragstart", (e) => {
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- Event Listeners ---
+    // Event Listeners 
     addItemForm.addEventListener("submit", async (event) => {
         event.preventDefault();
         const novoItem = {
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tipo: document.getElementById("tipo").value,
         };
         try {
-            const response = await fetch(`${apiBaseUrl}/cadastrar`, { // ROTA CORRETA
+            const response = await fetch(`${apiBaseUrl}/cadastrar`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(novoItem),
@@ -118,13 +118,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const id = target.dataset.id;
         if (target.classList.contains("delete-btn")) {
             try {
-                const response = await fetch(`${apiBaseUrl}/deletar/${id}`, { method: "DELETE" }); // ROTA CORRETA
+                const response = await fetch(`${apiBaseUrl}/deletar/${id}`, { method: "DELETE" }); 
                 if (response.ok) fetchItems();
             } catch (error) { console.error("Falha ao deletar:", error); }
         }
         if (target.classList.contains("complete-btn")) {
             try {
-                const response = await fetch(`${apiBaseUrl}/atualizar_status/${id}`, { // ROTA CORRETA
+                const response = await fetch(`${apiBaseUrl}/atualizar_status/${id}`, { 
                     method: "PUT",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ status: "Concluído" }),
